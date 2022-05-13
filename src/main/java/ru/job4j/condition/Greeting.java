@@ -2,11 +2,15 @@ package ru.job4j.condition;
 
 public class Greeting {
     public static void main(String[] args) {
-        String idea = "I like Java !";
-        System.out.println(idea);
-        idea += "But I am a newbie.";
-        int year = 2022;
-        idea += year;
-        System.out.println(idea);
+    }
+
+    public static boolean checkNumber(int year) {
+        if (year % 400 == 0) {
+            return true;
+        } else if (year % 4 == 0 && year % 100 != 0) {
+            return true;
+        }
+        return false;
     }
 }
+
