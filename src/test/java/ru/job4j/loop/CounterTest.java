@@ -67,4 +67,13 @@ public class CounterTest {
         Assert.assertEquals(expected, result);
     }
 
+    @Test
+    public void whenSumEvenNumbersFromZeroToThousandThen250500() {
+        int start = 0;
+        int finish = 1000;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 250500;
+        Assert.assertEquals(expected, result);
+    }
+
 }
