@@ -11,6 +11,7 @@ public class CounterTest {
         int start = 0;
         int finish = 5;
         int expected = 15;
+
         assertEquals(expected, Counter.sum(start, finish));
     }
 
