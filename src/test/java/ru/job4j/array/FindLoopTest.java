@@ -56,7 +56,7 @@ public class FindLoopTest {
         int[] data = new int[]{5, 2, 10, 2, 4, 1, 2, 3, 4, 5, 7, 6};
         int el = 99;
         int start = 4;
-        int finish = 12;
+        int finish = 11;
         int result = FindLoop.indexInRange(data, el, start, finish);
         int expected = -1;
         Assert.assertEquals(expected, result);
@@ -78,7 +78,7 @@ public class FindLoopTest {
         int[] data = new int[]{5, 2, 10, 2, 4, 1, 2, 3, 4, 5, 7, 6};
         int el = 23;
         int start = 1;
-        int finish = 12;
+        int finish = 11;
         int result = FindLoop.indexInRange(data, el, start, finish);
         int expected = -1;
         Assert.assertEquals(expected, result);
