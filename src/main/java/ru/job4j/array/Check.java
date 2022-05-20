@@ -4,8 +4,8 @@ public class Check {
     public static boolean mono(boolean[] data) {
         boolean result = true;
         boolean dataExpected = data[0];
-        for (boolean datum : data) {
-            if (dataExpected != datum) {
+        for (int i = 1; i < data.length; i++) {
+            if (dataExpected != data[i]) {
                 result = false;
                 break;
             }
