@@ -39,4 +39,48 @@ public class FindLoopTest {
         int expected = 2;
         Assert.assertEquals(expected, result);
     }
+
+    @Test
+    public void whenDiapasonHas2Then3() {
+        int[] data = new int[]{5, 2, 10, 2, 4};
+        int el = 2;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = 3;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenDiapasonHasNot8ThenMinus1() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 1, 2, 3, 4, 5, 7, 6};
+        int el = 99;
+        int start = 4;
+        int finish = 12;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = -1;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenDiapasonHas99Then2() {
+        int[] data = new int[]{5, 2, 99, 2, 4, 44, 55, 66};
+        int el = 99;
+        int start = 2;
+        int finish = 4;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = 2;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenDiapasonHasNot23ThenMinus() {
+        int[] data = new int[]{5, 2, 10, 2, 4, 1, 2, 3, 4, 5, 7, 6};
+        int el = 23;
+        int start = 1;
+        int finish = 12;
+        int result = FindLoop.indexInRange(data, el, start, finish);
+        int expected = -1;
+        Assert.assertEquals(expected, result);
+    }
 }
