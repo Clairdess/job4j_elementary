@@ -21,13 +21,8 @@ public class PhoneDictionary {
         }
         ArrayList<Person> arrayList = new ArrayList<>();
         for (Person person : persons) {
-            if (key.contains(person.getPhone())) {
-                arrayList.add(person);
-            } else if (key.contains(person.getAddress())) {
-                arrayList.add(person);
-            } else if (key.contains(person.getSurname())) {
-                arrayList.add(person);
-            } else if (key.contains(person.getName())) {
+            if (person.getPhone().contains(key) || person.getAddress().contains(key)
+                    || person.getSurname().contains(key) || person.getName().contains(key)) {
                 arrayList.add(person);
             }
         }
